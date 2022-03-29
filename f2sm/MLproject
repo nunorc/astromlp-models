@@ -1,0 +1,13 @@
+
+name: f2sm
+
+entry_points:
+  main:
+    parameters:
+      epochs: { type: float, default: 20 }
+      batch_size: { type: float, default: 32 }
+      loss: { type: string, default: 'mae' }
+      optimizer: { type: string, default: 'adam' }
+      ds: { type: string, default: '../../sdss-gs' }
+    command: "python train.py {epochs} {batch_size} {loss} {optimizer} {ds}"
+
