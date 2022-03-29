@@ -145,174 +145,174 @@ validation dataset. The highlighted row describes the final hyper-parameters use
 bootstrapping each model and the corresponding evaluation score (accuracy for classification
 models) on the test set, never seen by any model during the exploration steps.
 
-|  Input      |  Output        |  Epochs  |  Batch Size  |  Optimizer   |  Loss     |   Score    |
-|:-----------:|:--------------:|:--------:|:------------:|:------------:|:---------:|:----------:|
-|  `img`      |  `redshift`    |  10      |  32          |  RMSProp     |  MSE      |  0.003365  |
-|  `img`      |  `redshift`    |  10      |  32          |  RMSProp     |  MAE      |  0.030170  |
-|  `img`      |  `redshift`    |  10      |  32          |  Adam        |  MSE      |  0.016661  |
-|  `img`      |  `redshift`    |  10      |  32          |  Adam        |  MAE      |  0.071612  |
-|  `img`      |  `redshift`    |  10      |  64          |  RMSProp     |  MSE      |  0.003508  |
-|  `img`      |  `redshift`    |  10      |  64          |  RMSProp     |  MAE      |  0.030480  |
-|  `img`      |  `redshift`    |  10      |  64          |  Adam        |  MSE      |  0.003498  |
-|  `img`      |  `redshift`    |  10      |  64          |  Adam        |  MAE      |  0.071558  |
-|**`img`**    |**`redshift`**  |  **20**  |  **32**      |  **RMSProp** |  **MSE**  |**0.002377**|
-|  `fits`     |  `redshift`    |  10      |  32          |  RMSProp     |  MSE      |  0.001930  |
-|  `fits`     |  `redshift`    |  10      |  32          |  RMSProp     |  MAE      |  0.027434  |
-|  `fits`     |  `redshift`    |  10      |  32          |  Adam        |  MSE      |  0.001917  |
-|  `fits`     |  `redshift`    |  10      |  32          |  Adam        |  MAE      |  0.024896  |
-|  `fits`     |  `redshift`    |  10      |  64          |  RMSProp     |  MSE      |  0.002075  |
-|  `fits`     |  `redshift`    |  10      |  64          |  RMSProp     |  MAE      |  0.028206  |
-|  `fits`     |  `redshift`    |  10      |  64          |  Adam        |  MSE      |  0.001870  |
-|  `fits`     |  `redshift`    |  10      |  64          |  Adam        |  MAE      |  0.024997  |
-|**`fits`**   |**`redshift`**  |  **20**  |  **64**      |  **Adam**    |  **MSE**  |**0.002020**|
-|  `spectra`  |  `redshift`    |  10      |  32          |  RMSProp     |  MSE      |  0.004649  |
-|  `spectra`  |  `redshift`    |  10      |  32          |  RMSProp     |  MAE      |  0.033334  |
-|  `spectra`  |  `redshift`    |  10      |  32          |  Adam        |  MSE      |  0.006617  |
-|  `spectra`  |  `redshift`    |  10      |  32          |  Adam        |  MAE      |  0.040978  |
-|  `spectra`  |  `redshift`    |  10      |  64          |  RMSProp     |  MSE      |  0.005554  |
-|  `spectra`  |  `redshift`    |  10      |  64          |  RMSProp     |  MAE      |  0.038496  |
-|  `spectra`  |  `redshift`    |  10      |  64          |  Adam        |  MSE      |  0.014275  |
-|  `spectra`  |  `redshift`    |  10      |  64          |  Adam        |  MAE      |  0.044180  |
-|**`spectra`**|**`redshift`**  |  **20**  |  **32**      |  **RMSProp** |  **MSE**  |**0.004401**|
-|  `ssel`     |  `redshift`    |  10      |  32          |  RMSProp     |  MSE      |  0.004343  |
-|  `ssel`     |  `redshift`    |  10      |  32          |  RMSProp     |  MAE      |  0.030403  |
-|  `ssel`     |  `redshift`    |  10      |  32          |  Adam        |  MSE      |  0.008098  |
-|  `ssel`     |  `redshift`    |  10      |  32          |  Adam        |  MAE      |  0.045030  |
-|  `ssel`     |  `redshift`    |  10      |  64          |  RMSProp     |  MSE      |  0.005174  |
-|  `ssel`     |  `redshift`    |  10      |  64          |  RMSProp     |  MAE      |  0.031783  |
-|  `ssel`     |  `redshift`    |  10      |  64          |  Adam        |  MSE      |  0.006342  |
-|  `ssel`     |  `redshift`    |  10      |  64          |  Adam        |  MAE      |  0.053812  |
-|**`ssel`**   |**`redshift`**  |  **20**  |  **32**      |  **RMSProp** |  **MSE**  |**0.003700**|
-|  `bands`    |  `redshift`    |  10      |  32          |  RMSProp     |  MSE      |  0.003765  |
-|  `bands`    |  `redshift`    |  10      |  32          |  RMSProp     |  MAE      |  0.027912  |
-|  `bands`    |  `redshift`    |  10      |  32          |  Adam        |  MSE      |  0.004437  |
-|  `bands`    |  `redshift`    |  10      |  32          |  Adam        |  MAE      |  0.027528  |
-|  `bands`    |  `redshift`    |  10      |  64          |  RMSProp     |  MSE      |  0.004726  |
-|  `bands`    |  `redshift`    |  10      |  64          |  RMSProp     |  MAE      |  0.029070  |
-|  `bands`    |  `redshift`    |  10      |  64          |  Adam        |  MSE      |  0.004593  |
-|  `bands`    |  `redshift`    |  10      |  64          |  Adam        |  MAE      |  0.027921  |
-|**`bands`**  |**`redshift`**  |  **20**  |  **32**      |  **RMSProp** |  **MSE**  |**0.002806**|
-|  `wise`     |  `redshift`    |  10      |  32          |  RMSProp     |  MSE      |  0.011475  |
-|  `wise`     |  `redshift`    |  10      |  32          |  RMSProp     |  MAE      |  0.055713  |
-|  `wise`     |  `redshift`    |  10      |  32          |  Adam        |  MSE      |  0.011523  |
-|  `wise`     |  `redshift`    |  10      |  32          |  Adam        |  MAE      |  0.055016  |
-|  `wise`     |  `redshift`    |  10      |  64          |  RMSProp     |  MSE      |  0.011657  |
-|  `wise`     |  `redshift`    |  10      |  64          |  RMSProp     |  MAE      |  0.056263  |
-|  `wise`     |  `redshift`    |  10      |  64          |  Adam        |  MSE      |  0.011557  |
-|  `wise`     |  `redshift`    |  10      |  64          |  Adam        |  MAE      |  0.055382  |
-|**`wise`**   |**`redshift`**  | **20**   |  **32**      |  **RMSProp** |  **MSE**  |**0.012004**|
-|  `img`      |  `smass`       |  10      |  32          |  RMSProp     |  MSE      |  40929.859 |
-|  `img`      |  `smass`       |  10      |  32          |  RMSProp     |  MAE      |  26.048    |
-|  `img`      |  `smass`       |  10      |  32          |  Adam        |  MSE      |  40813.363 |
-|  `img`      |  `smass`       |  10      |  32          |  Adam        |  MAE      |  26.695    |
-|  `img`      |  `smass`       |  10      |  64          |  RMSProp     |  MSE      |  40982.949 |
-|  `img`      |  `smass`       |  10      |  64          |  RMSProp     |  MAE      |  26.736    |
-|  `img`      |  `smass`       |  10      |  64          |  Adam        |  MSE      |  42835.566 |
-|  `img`      |  `smass`       |  10      |  64          |  Adam        |  MAE      |  26.238    |
-|**`img`**    |**`smass`**     |  **20**  |  **64**      |  **Adam**    |  **MAE**  |**22.537**  |
-|  `fits`     |  `smass`       |  10      |  32          |  RMSProp     |  MSE      |  40600.176 |
-|  `fits`     |  `smass`       |  10      |  32          |  RMSProp     |  MAE      |  27.171    |
-|  `fits`     |  `smass`       |  10      |  32          |  Adam        |  MSE      |  40491.633 |
-|  `fits`     |  `smass`       |  10      |  32          |  Adam        |  MAE      |  25.758    |
-|  `fits`     |  `smass`       |  10      |  64          |  RMSProp     |  MSE      |  40679.352 |
-|  `fits`     |  `smass`       |  10      |  64          |  RMSProp     |  MAE      |  26.600    |
-|  `fits`     |  `smass`       |  10      |  64          |  Adam        |  MSE      |  40903.289 |
-|  `fits`     |  `smass`       |  10      |  64          |  Adam        |  MAE      |  25.931    |
-|**`fits`**   |**`smass`**     |  **20**  |  **32**      |  **Adam**    |  **MAE**  |**21.753**  |
-|  `spectra`  |  `smass`       |  10      |  32          |  RMSProp     |  MSE      |  2963.335  |
-|  `spectra`  |  `smass`       |  10      |  32          |  RMSProp     |  MAE      |  20.871    |
-|  `spectra`  |  `smass`       |  10      |  32          |  Adam        |  MSE      |  3432.733  |
-|  `spectra`  |  `smass`       |  10      |  32          |  Adam        |  MAE      |  20.129    |
-|  `spectra`  |  `smass`       |  10      |  64          |  RMSProp     |  MSE      |  3159.474  |
-|  `spectra`  |  `smass`       |  10      |  64          |  RMSProp     |  MAE      |  21.317    |
-|  `spectra`  |  `smass`       |  10      |  64          |  Adam        |  MSE      |  3518.646  |
-|  `spectra`  |  `smass`       |  10      |  64          |  Adam        |  MAE      |  20.420    |
-|**`spectra`**|**`smass`**     |  **20**  |  **32**      |  **Adam**    |  **MAE**  |**19.577**  |
-|  `ssel`     |  `smass`       |  10      |  32          |  RMSProp     |  MSE      |  40206.445 |
-|  `ssel`     |  `smass`       |  10      |  32          |  RMSProp     |  MAE      |  22.797    |
-|  `ssel`     |  `smass`       |  10      |  32          |  Adam        |  MSE      |  3018.159  |
-|  `ssel`     |  `smass`       |  10      |  32          |  Adam        |  MAE      |  22.728    |
-|  `ssel`     |  `smass`       |  10      |  64          |  RMSProp     |  MSE      |  40271.656 |
-|  `ssel`     |  `smass`       |  10      |  64          |  RMSProp     |  MAE      |  24.099    |
-|  `ssel`     |  `smass`       |  10      |  64          |  Adam        |  MSE      |  40798.273 |
-|  `ssel`     |  `smass`       |  10      |  64          |  Adam        |  MAE      |  22.380    |
-|**`ssel`**   |**`smass`**     |  **20**  |  **64**      |  **Adam**    |  **MAE**  |**18.793**  |
-|  `bands`    |  `smass`       |  10      |  32          |  RMSProp     |  MSE      |  3387.860  |
-|  `bands`    |  `smass`       |  10      |  32          |  RMSProp     |  MAE      |  26.523    |
-|  `bands`    |  `smass`       |  10      |  32          |  Adam        |  MSE      |  5747.023  |
-|  `bands`    |  `smass`       |  10      |  32          |  Adam        |  MAE      |  25.930    |
-|  `bands`    |  `smass`       |  10      |  64          |  RMSProp     |  MSE      |  5520.346  |
-|  `bands`    |  `smass`       |  10      |  64          |  RMSProp     |  MAE      |  26.694    |
-|  `bands`    |  `smass`       |  10      |  64          |  Adam        |  MSE      |  5725.097  |
-|  `bands`    |  `smass`       |  10      |  64          |  Adam        |  MAE      |  25.151    |
-|**`bands`**  |**`smass`**     |  **20**  |  **64**      |  **Adam**    |  **MAE**  |**25.344**  |
-|  `wise`     |  `smass`       |  10      |  32          |  RMSProp     |  MSE      |  4323.260  |
-|  `wise`     |  `smass`       |  10      |  32          |  RMSProp     |  MAE      |  30.034    |
-|  `wise`     |  `smass`       |  10      |  32          |  Adam        |  MSE      |  4391.042  |
-|  `wise`     |  `smass`       |  10      |  32          |  Adam        |  MAE      |  29.858    |
-|  `wise`     |  `smass`       |  10      |  64          |  RMSProp     |  MSE      |  4423.225  |
-|  `wise`     |  `smass`       |  10      |  64          |  RMSProp     |  MAE      |  30.605    |
-|  `wise`     |  `smass`       |  10      |  64          |  Adam        |  MSE      |  4433.951  |
-|  `wise`     |  `smass`       |  10      |  64          |  Adam        |  MAE      |  29.800    |
-|**`wise`**   |**`smass`**     |  **20**  |  **64**      |  **Adam**    |  **MAE**  |**27.719**  |
-|  `img`      |  `subclass`    |  10      |  32          |  RMSProp     |  categorical crossentropy      |  0.771606  |
-|  `img`      |  `subclass`    |  10      |  32          |  Adam        |  categorical crossentropy      |  0.778097  |
-|  `img`      |  `subclass`    |  10      |  64          |  RMSProp     |  categorical crossentropy      |  0.767020  |
-|  `img`      |  `subclass`    |  10      |  64          |  Adam        |  categorical crossentropy      |  0.787760  |
-|**`img`**    |**`subclass`**  |  **20**  |  **64**      |  **Adam**    |  **categorical crossentropy**  |**0.765625**|
-|  `fits`     |  `subclass`    |  10      |  32          |  RMSProp     |  categorical crossentropy      |  0.771977  |
-|  `fits`     |  `subclass`    |  10      |  32          |  Adam        |  categorical crossentropy      |  0.782177  |
-|  `fits`     |  `subclass`    |  10      |  64          |  RMSProp     |  categorical crossentropy      |  0.766183  |
-|  `fits`     |  `subclass`    |  10      |  64          |  Adam        |  categorical crossentropy      |  0.778739  |
-|**`fits`**   |**`subclass`**  |  **20**  |  **32**      |  **Adam**    |  **categorical crossentropy**  |**0.785590**|
-|  `spectra`  |  `subclass`    |  10      |  32          |  RMSProp     |  categorical crossentropy      |  0.765579  |
-|  `spectra`  |  `subclass`    |  10      |  32          |  Adam        |  categorical crossentropy      |  0.767897  |
-|  `spectra`  |  `subclass`    |  10      |  64          |  RMSProp     |  categorical crossentropy      |  0.766648  |
-|  `spectra`  |  `subclass`    |  10      |  64          |  Adam        |  categorical crossentropy      |  0.713914  |
-|**`spectra`**|**`subclass`**  |  **20**  |  **32**      |  **Adam**    |  **categorical crossentropy**  |**0.763455**|
-|  `ssel`     |  `subclass`    |  10      |  32          |  RMSProp     |  categorical crossentropy      |  0.765764  |
-|  `ssel`     |  `subclass`    |  10      |  32          |  Adam        |  categorical crossentropy      |  0.768824  |
-|  `ssel`     |  `subclass`    |  10      |  64          |  RMSProp     |  categorical crossentropy      |  0.761719  |
-|  `ssel`     |  `subclass`    |  10      |  64          |  Adam        |  categorical crossentropy      |  0.768415  |
-|**`ssel`**   |**`subclass`**  |  **20**  |  **32**      |  **Adam**    |  **categorical crossentropy**  |**0.756076**|
-|  `bands`    |  `subclass`    |  10      |  32          |  RMSProp     |  categorical crossentropy      |  0.758995  |
-|  `bands`    |  `subclass`    |  10      |  32          |  Adam        |  categorical crossentropy      |  0.762148  |
-|  `bands`    |  `subclass`    |  10      |  64          |  RMSProp     |  categorical crossentropy      |  0.757720  |
-|  `bands`    |  `subclass`    |  10      |  64          |  Adam        |  categorical crossentropy      |  0.762742  |
-|**`bands`**  |**`subclass`**  |  **20**  |  **32**      |  **Adam**    |  **categorical crossentropy**  |**0.753472**|
-|  `wise`     |  `subclass`    |  10      |  32          |  RMSProp     |  categorical crossentropy      |  0.772348  |
-|  `wise`     |  `subclass`    |  10      |  32          |  Adam        |  categorical crossentropy      |  0.779303  |
-|  `wise`     |  `subclass`    |  10      |  64          |  RMSProp     |  categorical crossentropy      |  0.753348  |
-|  `wise`     |  `subclass`    |  10      |  64          |  Adam        |  categorical crossentropy      |  0.773345  |
-|**`wise`**   |**`subclass`**  |  **20**  |  **32**      |  **Adam**    |  **categorical crossentropy**  |**0.784288**|
-|  `img`      |  `gz2c`        |  10      |  32          |  RMSProp     |  categorical crossentropy      |  FIXME     |
-|  `img`      |  `gz2c`        |  10      |  32          |  Adam        |  categorical crossentropy      |  FIXME     |
-|  `img`      |  `gz2c`        |  10      |  64          |  RMSProp     |  categorical crossentropy      |  FIXME     |
-|  `img`      |  `gz2c`        |  10      |  64          |  Adam        |  categorical crossentropy      |  FIXME     |
-|**`img`**    |**`gz2c`**      |  **20**  |  **64**      |  **Adam**    |  **categorical crossentropy**  |**FIXME**   |
-|  `fits`     |  `gz2c`        |  10      |  32          |  RMSProp     |  categorical crossentropy      |  FIXME     |
-|  `fits`     |  `gz2c`        |  10      |  32          |  Adam        |  categorical crossentropy      |  FIXME     |
-|  `fits`     |  `gz2c`        |  10      |  64          |  RMSProp     |  categorical crossentropy      |  FIXME     |
-|  `fits`     |  `gz2c`        |  10      |  64          |  Adam        |  categorical crossentropy      |  FIXME     |
-|**`fits`**   |**`gz2c`**      |  **20**  |  **64**      |  **Adam**    |  **categorical crossentropy**  |**FIXME**   |
-|  `spectra`  |  `gz2c`        |  10      |  32          |  RMSProp     |  categorical crossentropy      |  FIXME     |
-|  `spectra`  |  `gz2c`        |  10      |  32          |  Adam        |  categorical crossentropy      |  FIXME     |
-|  `spectra`  |  `gz2c`        |  10      |  64          |  RMSProp     |  categorical crossentropy      |  FIXME     |
-|  `spectra`  |  `gz2c`        |  10      |  64          |  Adam        |  categorical crossentropy      |  FIXME     |
-|**`spectra`**|**`gz2c`**      |  **20**  |  **64**      |  **Adam**    |  **categorical crossentropy**  |**FIXME**   |
-|  `ssel`     |  `gz2c`        |  10      |  32          |  RMSProp     |  categorical crossentropy      |  FIXME     |
-|  `ssel`     |  `gz2c`        |  10      |  32          |  Adam        |  categorical crossentropy      |  FIXME     |
-|  `ssel`     |  `gz2c`        |  10      |  64          |  RMSProp     |  categorical crossentropy      |  FIXME     |
-|  `ssel`     |  `gz2c`        |  10      |  64          |  Adam        |  categorical crossentropy      |  FIXME     |
-|**`ssel`**   |**`gz2c`**      |  **20**  |  **64**      |  **Adam**    |  **categorical crossentropy**  |**FIXME**   |
-|  `bands`    |  `gz2c`        |  10      |  32          |  RMSProp     |  categorical crossentropy      |  FIXME     |
-|  `bands`    |  `gz2c`        |  10      |  32          |  Adam        |  categorical crossentropy      |  FIXME     |
-|  `bands`    |  `gz2c`        |  10      |  64          |  RMSProp     |  categorical crossentropy      |  FIXME     |
-|  `bands`    |  `gz2c`        |  10      |  64          |  Adam        |  categorical crossentropy      |  FIXME     |
-|**`bands`**  |**`gz2c`**      |  **20**  |  **64**      |  **Adam**    |  **categorical crossentropy**  |**FIXME**   |
-|  `wise`     |  `gz2c`        |  10      |  32          |  RMSProp     |  categorical crossentropy      |  FIXME     |
-|  `wise`     |  `gz2c`        |  10      |  32          |  Adam        |  categorical crossentropy      |  FIXME     |
-|  `wise`     |  `gz2c`        |  10      |  64          |  RMSProp     |  categorical crossentropy      |  FIXME     |
-|  `wise`     |  `gz2c`        |  10      |  64          |  Adam        |  categorical crossentropy      |  FIXME     |
-|**`wise`**   |**`gz2c`**      |  **20**  |  **64**      |  **Adam**    |  **categorical crossentropy**  |**FIXME**   |
+|  Model    |  Input      |  Output        |  Epochs  |  Batch Size  |  Optimizer   |  Loss     |   Score    |
+|:---------:|:-----------:|:--------------:|:--------:|:------------:|:------------:|:---------:|:----------:|
+|  `i2r`    |  `img`      |  `redshift`    |  10      |  32          |  RMSProp     |  MSE      |  0.003365  |
+|  `i2r`    |  `img`      |  `redshift`    |  10      |  32          |  RMSProp     |  MAE      |  0.030170  |
+|  `i2r`    |  `img`      |  `redshift`    |  10      |  32          |  Adam        |  MSE      |  0.016661  |
+|  `i2r`    |  `img`      |  `redshift`    |  10      |  32          |  Adam        |  MAE      |  0.071612  |
+|  `i2r`    |  `img`      |  `redshift`    |  10      |  64          |  RMSProp     |  MSE      |  0.003508  |
+|  `i2r`    |  `img`      |  `redshift`    |  10      |  64          |  RMSProp     |  MAE      |  0.030480  |
+|  `i2r`    |  `img`      |  `redshift`    |  10      |  64          |  Adam        |  MSE      |  0.003498  |
+|  `i2r`    |  `img`      |  `redshift`    |  10      |  64          |  Adam        |  MAE      |  0.071558  |
+|**`i2r`**  |**`img`**    |**`redshift`**  |  **20**  |  **32**      |  **RMSProp** |  **MSE**  |**0.002377**|
+|  `f2r`    |  `fits`     |  `redshift`    |  10      |  32          |  RMSProp     |  MSE      |  0.001930  |
+|  `f2r`    |  `fits`     |  `redshift`    |  10      |  32          |  RMSProp     |  MAE      |  0.027434  |
+|  `f2r`    |  `fits`     |  `redshift`    |  10      |  32          |  Adam        |  MSE      |  0.001917  |
+|  `f2r`    |  `fits`     |  `redshift`    |  10      |  32          |  Adam        |  MAE      |  0.024896  |
+|  `f2r`    |  `fits`     |  `redshift`    |  10      |  64          |  RMSProp     |  MSE      |  0.002075  |
+|  `f2r`    |  `fits`     |  `redshift`    |  10      |  64          |  RMSProp     |  MAE      |  0.028206  |
+|  `f2r`    |  `fits`     |  `redshift`    |  10      |  64          |  Adam        |  MSE      |  0.001870  |
+|  `f2r`    |  `fits`     |  `redshift`    |  10      |  64          |  Adam        |  MAE      |  0.024997  |
+|**`f2r`**  |**`fits`**   |**`redshift`**  |  **20**  |  **64**      |  **Adam**    |  **MSE**  |**0.002020**|
+|  `s2r`    |  `spectra`  |  `redshift`    |  10      |  32          |  RMSProp     |  MSE      |  0.004649  |
+|  `s2r`    |  `spectra`  |  `redshift`    |  10      |  32          |  RMSProp     |  MAE      |  0.033334  |
+|  `s2r`    |  `spectra`  |  `redshift`    |  10      |  32          |  Adam        |  MSE      |  0.006617  |
+|  `s2r`    |  `spectra`  |  `redshift`    |  10      |  32          |  Adam        |  MAE      |  0.040978  |
+|  `s2r`    |  `spectra`  |  `redshift`    |  10      |  64          |  RMSProp     |  MSE      |  0.005554  |
+|  `s2r`    |  `spectra`  |  `redshift`    |  10      |  64          |  RMSProp     |  MAE      |  0.038496  |
+|  `s2r`    |  `spectra`  |  `redshift`    |  10      |  64          |  Adam        |  MSE      |  0.014275  |
+|  `s2r`    |  `spectra`  |  `redshift`    |  10      |  64          |  Adam        |  MAE      |  0.044180  |
+|**`s2r`**  |**`spectra`**|**`redshift`**  |  **20**  |  **32**      |  **RMSProp** |  **MSE**  |**0.004401**|
+|  `ss2r`   |  `ssel`     |  `redshift`    |  10      |  32          |  RMSProp     |  MSE      |  0.004343  |
+|  `ss2r`   |  `ssel`     |  `redshift`    |  10      |  32          |  RMSProp     |  MAE      |  0.030403  |
+|  `ss2r`   |  `ssel`     |  `redshift`    |  10      |  32          |  Adam        |  MSE      |  0.008098  |
+|  `ss2r`   |  `ssel`     |  `redshift`    |  10      |  32          |  Adam        |  MAE      |  0.045030  |
+|  `ss2r`   |  `ssel`     |  `redshift`    |  10      |  64          |  RMSProp     |  MSE      |  0.005174  |
+|  `ss2r`   |  `ssel`     |  `redshift`    |  10      |  64          |  RMSProp     |  MAE      |  0.031783  |
+|  `ss2r`   |  `ssel`     |  `redshift`    |  10      |  64          |  Adam        |  MSE      |  0.006342  |
+|  `ss2r`   |  `ssel`     |  `redshift`    |  10      |  64          |  Adam        |  MAE      |  0.053812  |
+|**`ss2r`** |**`ssel`**   |**`redshift`**  |  **20**  |  **32**      |  **RMSProp** |  **MSE**  |**0.003700**|
+|  `b2r`    |  `bands`    |  `redshift`    |  10      |  32          |  RMSProp     |  MSE      |  0.003765  |
+|  `b2r`    |  `bands`    |  `redshift`    |  10      |  32          |  RMSProp     |  MAE      |  0.027912  |
+|  `b2r`    |  `bands`    |  `redshift`    |  10      |  32          |  Adam        |  MSE      |  0.004437  |
+|  `b2r`    |  `bands`    |  `redshift`    |  10      |  32          |  Adam        |  MAE      |  0.027528  |
+|  `b2r`    |  `bands`    |  `redshift`    |  10      |  64          |  RMSProp     |  MSE      |  0.004726  |
+|  `b2r`    |  `bands`    |  `redshift`    |  10      |  64          |  RMSProp     |  MAE      |  0.029070  |
+|  `b2r`    |  `bands`    |  `redshift`    |  10      |  64          |  Adam        |  MSE      |  0.004593  |
+|  `b2r`    |  `bands`    |  `redshift`    |  10      |  64          |  Adam        |  MAE      |  0.027921  |
+|**`b2r`**  |**`bands`**  |**`redshift`**  |  **20**  |  **32**      |  **RMSProp** |  **MSE**  |**0.002806**|
+|  `w2r`    |  `wise`     |  `redshift`    |  10      |  32          |  RMSProp     |  MSE      |  0.011475  |
+|  `w2r`    |  `wise`     |  `redshift`    |  10      |  32          |  RMSProp     |  MAE      |  0.055713  |
+|  `w2r`    |  `wise`     |  `redshift`    |  10      |  32          |  Adam        |  MSE      |  0.011523  |
+|  `w2r`    |  `wise`     |  `redshift`    |  10      |  32          |  Adam        |  MAE      |  0.055016  |
+|  `w2r`    |  `wise`     |  `redshift`    |  10      |  64          |  RMSProp     |  MSE      |  0.011657  |
+|  `w2r`    |  `wise`     |  `redshift`    |  10      |  64          |  RMSProp     |  MAE      |  0.056263  |
+|  `w2r`    |  `wise`     |  `redshift`    |  10      |  64          |  Adam        |  MSE      |  0.011557  |
+|  `w2r`    |  `wise`     |  `redshift`    |  10      |  64          |  Adam        |  MAE      |  0.055382  |
+|**`w2r`**  |**`wise`**   |**`redshift`**  | **20**   |  **32**      |  **RMSProp** |  **MSE**  |**0.012004**|
+|  `i2sm`   |  `img`      |  `smass`       |  10      |  32          |  RMSProp     |  MSE      |  40929.859 |
+|  `i2sm`   |  `img`      |  `smass`       |  10      |  32          |  RMSProp     |  MAE      |  26.048    |
+|  `i2sm`   |  `img`      |  `smass`       |  10      |  32          |  Adam        |  MSE      |  40813.363 |
+|  `i2sm`   |  `img`      |  `smass`       |  10      |  32          |  Adam        |  MAE      |  26.695    |
+|  `i2sm`   |  `img`      |  `smass`       |  10      |  64          |  RMSProp     |  MSE      |  40982.949 |
+|  `i2sm`   |  `img`      |  `smass`       |  10      |  64          |  RMSProp     |  MAE      |  26.736    |
+|  `i2sm`   |  `img`      |  `smass`       |  10      |  64          |  Adam        |  MSE      |  42835.566 |
+|  `i2sm`   |  `img`      |  `smass`       |  10      |  64          |  Adam        |  MAE      |  26.238    |
+|**`i2sm`** |**`img`**    |**`smass`**     |  **20**  |  **64**      |  **Adam**    |  **MAE**  |**22.537**  |
+|  `f2sm`   |  `fits`     |  `smass`       |  10      |  32          |  RMSProp     |  MSE      |  40600.176 |
+|  `f2sm`   |  `fits`     |  `smass`       |  10      |  32          |  RMSProp     |  MAE      |  27.171    |
+|  `f2sm`   |  `fits`     |  `smass`       |  10      |  32          |  Adam        |  MSE      |  40491.633 |
+|  `f2sm`   |  `fits`     |  `smass`       |  10      |  32          |  Adam        |  MAE      |  25.758    |
+|  `f2sm`   |  `fits`     |  `smass`       |  10      |  64          |  RMSProp     |  MSE      |  40679.352 |
+|  `f2sm`   |  `fits`     |  `smass`       |  10      |  64          |  RMSProp     |  MAE      |  26.600    |
+|  `f2sm`   |  `fits`     |  `smass`       |  10      |  64          |  Adam        |  MSE      |  40903.289 |
+|  `f2sm`   |  `fits`     |  `smass`       |  10      |  64          |  Adam        |  MAE      |  25.931    |
+|**`f2sm`** |**`fits`**   |**`smass`**     |  **20**  |  **32**      |  **Adam**    |  **MAE**  |**21.753**  |
+|  `s2sm`   |  `spectra`  |  `smass`       |  10      |  32          |  RMSProp     |  MSE      |  2963.335  |
+|  `s2sm`   |  `spectra`  |  `smass`       |  10      |  32          |  RMSProp     |  MAE      |  20.871    |
+|  `s2sm`   |  `spectra`  |  `smass`       |  10      |  32          |  Adam        |  MSE      |  3432.733  |
+|  `s2sm`   |  `spectra`  |  `smass`       |  10      |  32          |  Adam        |  MAE      |  20.129    |
+|  `s2sm`   |  `spectra`  |  `smass`       |  10      |  64          |  RMSProp     |  MSE      |  3159.474  |
+|  `s2sm`   |  `spectra`  |  `smass`       |  10      |  64          |  RMSProp     |  MAE      |  21.317    |
+|  `s2sm`   |  `spectra`  |  `smass`       |  10      |  64          |  Adam        |  MSE      |  3518.646  |
+|  `s2sm`   |  `spectra`  |  `smass`       |  10      |  64          |  Adam        |  MAE      |  20.420    |
+|**`s2sm`** |**`spectra`**|**`smass`**     |  **20**  |  **32**      |  **Adam**    |  **MAE**  |**19.577**  |
+|  `ss2sm`  |  `ssel`     |  `smass`       |  10      |  32          |  RMSProp     |  MSE      |  40206.445 |
+|  `ss2sm`  |  `ssel`     |  `smass`       |  10      |  32          |  RMSProp     |  MAE      |  22.797    |
+|  `ss2sm`  |  `ssel`     |  `smass`       |  10      |  32          |  Adam        |  MSE      |  3018.159  |
+|  `ss2sm`  |  `ssel`     |  `smass`       |  10      |  32          |  Adam        |  MAE      |  22.728    |
+|  `ss2sm`  |  `ssel`     |  `smass`       |  10      |  64          |  RMSProp     |  MSE      |  40271.656 |
+|  `ss2sm`  |  `ssel`     |  `smass`       |  10      |  64          |  RMSProp     |  MAE      |  24.099    |
+|  `ss2sm`  |  `ssel`     |  `smass`       |  10      |  64          |  Adam        |  MSE      |  40798.273 |
+|  `ss2sm`  |  `ssel`     |  `smass`       |  10      |  64          |  Adam        |  MAE      |  22.380    |
+|**`ss2sm`**|**`ssel`**   |**`smass`**     |  **20**  |  **64**      |  **Adam**    |  **MAE**  |**18.793**  |
+|  `b2sm`   |  `bands`    |  `smass`       |  10      |  32          |  RMSProp     |  MSE      |  3387.860  |
+|  `b2sm`   |  `bands`    |  `smass`       |  10      |  32          |  RMSProp     |  MAE      |  26.523    |
+|  `b2sm`   |  `bands`    |  `smass`       |  10      |  32          |  Adam        |  MSE      |  5747.023  |
+|  `b2sm`   |  `bands`    |  `smass`       |  10      |  32          |  Adam        |  MAE      |  25.930    |
+|  `b2sm`   |  `bands`    |  `smass`       |  10      |  64          |  RMSProp     |  MSE      |  5520.346  |
+|  `b2sm`   |  `bands`    |  `smass`       |  10      |  64          |  RMSProp     |  MAE      |  26.694    |
+|  `b2sm`   |  `bands`    |  `smass`       |  10      |  64          |  Adam        |  MSE      |  5725.097  |
+|  `b2sm`   |  `bands`    |  `smass`       |  10      |  64          |  Adam        |  MAE      |  25.151    |
+|**`b2sm`** |**`bands`**  |**`smass`**     |  **20**  |  **64**      |  **Adam**    |  **MAE**  |**25.344**  |
+|  `w2sm`   |  `wise`     |  `smass`       |  10      |  32          |  RMSProp     |  MSE      |  4323.260  |
+|  `w2sm`   |  `wise`     |  `smass`       |  10      |  32          |  RMSProp     |  MAE      |  30.034    |
+|  `w2sm`   |  `wise`     |  `smass`       |  10      |  32          |  Adam        |  MSE      |  4391.042  |
+|  `w2sm`   |  `wise`     |  `smass`       |  10      |  32          |  Adam        |  MAE      |  29.858    |
+|  `w2sm`   |  `wise`     |  `smass`       |  10      |  64          |  RMSProp     |  MSE      |  4423.225  |
+|  `w2sm`   |  `wise`     |  `smass`       |  10      |  64          |  RMSProp     |  MAE      |  30.605    |
+|  `w2sm`   |  `wise`     |  `smass`       |  10      |  64          |  Adam        |  MSE      |  4433.951  |
+|  `w2sm`   |  `wise`     |  `smass`       |  10      |  64          |  Adam        |  MAE      |  29.800    |
+|**`w2sm`** |**`wise`**   |**`smass`**     |  **20**  |  **64**      |  **Adam**    |  **MAE**  |**27.719**  |
+|  `i2s`    |  `img`      |  `subclass`    |  10      |  32          |  RMSProp     |  categorical crossentropy      |  0.771606  |
+|  `i2s`    |  `img`      |  `subclass`    |  10      |  32          |  Adam        |  categorical crossentropy      |  0.778097  |
+|  `i2s`    |  `img`      |  `subclass`    |  10      |  64          |  RMSProp     |  categorical crossentropy      |  0.767020  |
+|  `i2s`    |  `img`      |  `subclass`    |  10      |  64          |  Adam        |  categorical crossentropy      |  0.787760  |
+|**`i2s`**  |**`img`**    |**`subclass`**  |  **20**  |  **64**      |  **Adam**    |  **categorical crossentropy**  |**0.765625**|
+|  `f2s`    |  `fits`     |  `subclass`    |  10      |  32          |  RMSProp     |  categorical crossentropy      |  0.771977  |
+|  `f2s`    |  `fits`     |  `subclass`    |  10      |  32          |  Adam        |  categorical crossentropy      |  0.782177  |
+|  `f2s`    |  `fits`     |  `subclass`    |  10      |  64          |  RMSProp     |  categorical crossentropy      |  0.766183  |
+|  `f2s`    |  `fits`     |  `subclass`    |  10      |  64          |  Adam        |  categorical crossentropy      |  0.778739  |
+|**`f2s`**  |**`fits`**   |**`subclass`**  |  **20**  |  **32**      |  **Adam**    |  **categorical crossentropy**  |**0.785590**|
+|  `s2s`    |  `spectra`  |  `subclass`    |  10      |  32          |  RMSProp     |  categorical crossentropy      |  0.765579  |
+|  `s2s`    |  `spectra`  |  `subclass`    |  10      |  32          |  Adam        |  categorical crossentropy      |  0.767897  |
+|  `s2s`    |  `spectra`  |  `subclass`    |  10      |  64          |  RMSProp     |  categorical crossentropy      |  0.766648  |
+|  `s2s`    |  `spectra`  |  `subclass`    |  10      |  64          |  Adam        |  categorical crossentropy      |  0.713914  |
+|**`s2s`**  |**`spectra`**|**`subclass`**  |  **20**  |  **32**      |  **Adam**    |  **categorical crossentropy**  |**0.763455**|
+|  `ss2s`   |  `ssel`     |  `subclass`    |  10      |  32          |  RMSProp     |  categorical crossentropy      |  0.765764  |
+|  `ss2s`   |  `ssel`     |  `subclass`    |  10      |  32          |  Adam        |  categorical crossentropy      |  0.768824  |
+|  `ss2s`   |  `ssel`     |  `subclass`    |  10      |  64          |  RMSProp     |  categorical crossentropy      |  0.761719  |
+|  `ss2s`   |  `ssel`     |  `subclass`    |  10      |  64          |  Adam        |  categorical crossentropy      |  0.768415  |
+|**`ss2s`** |**`ssel`**   |**`subclass`**  |  **20**  |  **32**      |  **Adam**    |  **categorical crossentropy**  |**0.756076**|
+|  `b2s`    |  `bands`    |  `subclass`    |  10      |  32          |  RMSProp     |  categorical crossentropy      |  0.758995  |
+|  `b2s`    |  `bands`    |  `subclass`    |  10      |  32          |  Adam        |  categorical crossentropy      |  0.762148  |
+|  `b2s`    |  `bands`    |  `subclass`    |  10      |  64          |  RMSProp     |  categorical crossentropy      |  0.757720  |
+|  `b2s`    |  `bands`    |  `subclass`    |  10      |  64          |  Adam        |  categorical crossentropy      |  0.762742  |
+|**`b2s`**  |**`bands`**  |**`subclass`**  |  **20**  |  **32**      |  **Adam**    |  **categorical crossentropy**  |**0.753472**|
+|  `w2s`    |  `wise`     |  `subclass`    |  10      |  32          |  RMSProp     |  categorical crossentropy      |  0.772348  |
+|  `w2s`    |  `wise`     |  `subclass`    |  10      |  32          |  Adam        |  categorical crossentropy      |  0.779303  |
+|  `w2s`    |  `wise`     |  `subclass`    |  10      |  64          |  RMSProp     |  categorical crossentropy      |  0.753348  |
+|  `w2s`    |  `wise`     |  `subclass`    |  10      |  64          |  Adam        |  categorical crossentropy      |  0.773345  |
+|**`w2s`**  |**`wise`**   |**`subclass`**  |  **20**  |  **32**      |  **Adam**    |  **categorical crossentropy**  |**0.784288**|
+|  `i2g`    |  `img`      |  `gz2c`        |  10      |  32          |  RMSProp     |  categorical crossentropy      |  0.177365  |
+|  `i2g`    |  `img`      |  `gz2c`        |  10      |  32          |  Adam        |  categorical crossentropy      |  0.179617  |
+|  `i2g`    |  `img`      |  `gz2c`        |  10      |  64          |  RMSProp     |  categorical crossentropy      |  0.178693  |
+|  `i2g`    |  `img`      |  `gz2c`        |  10      |  64          |  Adam        |  categorical crossentropy      |  0.179261  |
+|**`i2g`**  |**`img`**    |**`gz2c`**      |  **20**  |  **32**      |  **Adam**    |  **categorical crossentropy**  |**0.206522**|
+|  `f2g`    |  `fits`     |  `gz2c`        |  10      |  32          |  RMSProp     |  categorical crossentropy      |  0.278153  |
+|  `f2g`    |  `fits`     |  `gz2c`        |  10      |  32          |  Adam        |  categorical crossentropy      |  0.355011  |
+|  `f2g`    |  `fits`     |  `gz2c`        |  10      |  64          |  RMSProp     |  categorical crossentropy      |  0.273864  |
+|  `f2g`    |  `fits`     |  `gz2c`        |  10      |  64          |  Adam        |  categorical crossentropy      |  0.322159  |
+|**`f2g`**  |**`fits`**   |**`gz2c`**      |  **20**  |  **32**      |  **Adam**    |  **categorical crossentropy**  |**0.372283**|
+|  `s2g`    |  `spectra`  |  `gz2c`        |  10      |  32          |  RMSProp     |  categorical crossentropy      |  0.268863  |
+|  `s2g`    |  `spectra`  |  `gz2c`        |  10      |  32          |  Adam        |  categorical crossentropy      |  0.184685  |
+|  `s2g`    |  `spectra`  |  `gz2c`        |  10      |  64          |  RMSProp     |  categorical crossentropy      |  0.267045  |
+|  `s2g`    |  `spectra`  |  `gz2c`        |  10      |  64          |  Adam        |  categorical crossentropy      |  0.192330  |
+|**`s2g`**  |**`spectra`**|**`gz2c`**      |  **20**  |  **32**      |  **RMSProp** |  **categorical crossentropy**  |**0.225543**|
+|  `ss2g`   |  `ssel`     |  `gz2c`        |  10      |  32          |  RMSProp     |  categorical crossentropy      |  0.261824  |
+|  `ss2g`   |  `ssel`     |  `gz2c`        |  10      |  32          |  Adam        |  categorical crossentropy      |  0.182151  |
+|  `ss2g`   |  `ssel`     |  `gz2c`        |  10      |  64          |  RMSProp     |  categorical crossentropy      |  0.261932  |
+|  `ss2g`   |  `ssel`     |  `gz2c`        |  10      |  64          |  Adam        |  categorical crossentropy      |  0.256818  |
+|**`ss2g`** |**`ssel`**   |**`gz2c`**      |  **20**  |  **64**      |  **RMSProp** |  **categorical crossentropy**  |**0.259511**|
+|  `b2g`    |  `bands`    |  `gz2c`        |  10      |  32          |  RMSProp     |  categorical crossentropy      |  0.246340  |
+|  `b2g`    |  `bands`    |  `gz2c`        |  10      |  32          |  Adam        |  categorical crossentropy      |  0.245495  |
+|  `b2g`    |  `bands`    |  `gz2c`        |  10      |  64          |  RMSProp     |  categorical crossentropy      |  0.245455  |
+|  `b2g`    |  `bands`    |  `gz2c`        |  10      |  64          |  Adam        |  categorical crossentropy      |  0.243466  |
+|**`b2g`**  |**`bands`**  |**`gz2c`**      |  **20**  |  **32**      |  **RMSProp** |  **categorical crossentropy**  |**0.275815**|
+|  `w2g`    |  `wise`     |  `gz2c`        |  10      |  32          |  RMSProp     |  categorical crossentropy      |  0.257320  |
+|  `w2g`    |  `wise`     |  `gz2c`        |  10      |  32          |  Adam        |  categorical crossentropy      |  0.262387  |
+|  `w2g`    |  `wise`     |  `gz2c`        |  10      |  64          |  RMSProp     |  categorical crossentropy      |  0.258239  |
+|  `w2g`    |  `wise`     |  `gz2c`        |  10      |  64          |  Adam        |  categorical crossentropy      |  0.259943  |
+|**`w2g`**  |**`wise`**   |**`gz2c`**      |  **20**  |  **32**      |  **Adam**    |  **categorical crossentropy**  |**0.254076**|
 

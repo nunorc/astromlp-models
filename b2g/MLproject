@@ -1,0 +1,12 @@
+
+name: b2g
+
+entry_points:
+  main:
+    parameters:
+      epochs: { type: float, default: 20 }
+      batch_size: { type: float, default: 32 }
+      optimizer: { type: string, default: 'rmsprop' }
+      ds: { type: string, default: '../../sdss-gs' }
+    command: "python train.py {epochs} {batch_size} {optimizer} {ds}"
+
