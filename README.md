@@ -84,8 +84,8 @@ outputs for regression and classification models.
 |:------------:|:------------:|---------------|
 |  `redshift`  |  regression  |  final redshift from SDSS data `z` ([data table details](http://skyserver.sdss.org/dr16/en/help/browser/browser.aspx#&&history=description+SpecPhoto+V))  |
 |  `subclass`  |  classification  | subset of sub-class from SDSS data for the galaxy objects `subClass` ([data table details](http://skyserver.sdss.org/dr16/en/help/browser/browser.aspx#&&history=description+SpecPhoto+V))  |
-|  `smass`     |  regression   |  stellar mass extracted from the [eBOSS Firefly catalog]("https://www.sdss.org/dr16/spectro/eboss-firefly-value-added-catalog)  |
-|  `gz2c`      |  classification  | simplified version of the Galaxy Zoo 2 classification, from [Willett et al 2013]("https://academic.oup.com/mnras/article/435/4/2835/1022913) (see class sets section below for details)  |
+|  `smass`     |  regression   |  stellar mass extracted from the [eBOSS Firefly catalog](https://www.sdss.org/dr16/spectro/eboss-firefly-value-added-catalog)  |
+|  `gz2c`      |  classification  | simplified version of the Galaxy Zoo 2 classification, from [Willett et al 2013](https://academic.oup.com/mnras/article/435/4/2835/1022913) (see class sets section below for details)  |
 
 ## Class Sets
 
