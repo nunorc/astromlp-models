@@ -1,0 +1,45 @@
+Model: "f2s"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ fits (InputLayer)           [(None, 61, 61, 5)]       0         
+                                                                 
+ separable_conv2d (Separable  (None, 59, 59, 64)       429       
+ Conv2D)                                                         
+                                                                 
+ max_pooling2d (MaxPooling2D  (None, 29, 29, 64)       0         
+ )                                                               
+                                                                 
+ separable_conv2d_1 (Separab  (None, 27, 27, 64)       4736      
+ leConv2D)                                                       
+                                                                 
+ max_pooling2d_1 (MaxPooling  (None, 13, 13, 64)       0         
+ 2D)                                                             
+                                                                 
+ separable_conv2d_2 (Separab  (None, 11, 11, 128)      8896      
+ leConv2D)                                                       
+                                                                 
+ max_pooling2d_2 (MaxPooling  (None, 5, 5, 128)        0         
+ 2D)                                                             
+                                                                 
+ separable_conv2d_3 (Separab  (None, 3, 3, 128)        17664     
+ leConv2D)                                                       
+                                                                 
+ max_pooling2d_3 (MaxPooling  (None, 1, 1, 128)        0         
+ 2D)                                                             
+                                                                 
+ flatten (Flatten)           (None, 128)               0         
+                                                                 
+ dense (Dense)               (None, 64)                8256      
+                                                                 
+ dense_1 (Dense)             (None, 32)                2080      
+                                                                 
+ dense_2 (Dense)             (None, 32)                1056      
+                                                                 
+ subclass (Dense)            (None, 4)                 132       
+                                                                 
+=================================================================
+Total params: 43,249
+Trainable params: 43,249
+Non-trainable params: 0
+_________________________________________________________________

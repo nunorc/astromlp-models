@@ -1,0 +1,20 @@
+Model: "b2s"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ bands (InputLayer)          [(None, 5)]               0         
+                                                                 
+ normalization (Normalizatio  (None, 5)                11        
+ n)                                                              
+                                                                 
+ dense (Dense)               (None, 32)                192       
+                                                                 
+ dense_1 (Dense)             (None, 32)                1056      
+                                                                 
+ subclass (Dense)            (None, 4)                 132       
+                                                                 
+=================================================================
+Total params: 1,391
+Trainable params: 1,380
+Non-trainable params: 11
+_________________________________________________________________

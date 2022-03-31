@@ -1,0 +1,22 @@
+Model: "ss2g"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ ssel (InputLayer)           [(None, 1423)]            0         
+                                                                 
+ normalization (Normalizatio  (None, 1423)             2847      
+ n)                                                              
+                                                                 
+ dense (Dense)               (None, 256)               364544    
+                                                                 
+ dense_1 (Dense)             (None, 128)               32896     
+                                                                 
+ dense_2 (Dense)             (None, 32)                4128      
+                                                                 
+ gz2c (Dense)                (None, 23)                759       
+                                                                 
+=================================================================
+Total params: 405,174
+Trainable params: 402,327
+Non-trainable params: 2,847
+_________________________________________________________________

@@ -1,0 +1,22 @@
+Model: "s2r"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ spectra (InputLayer)        [(None, 3522)]            0         
+                                                                 
+ normalization (Normalizatio  (None, 3522)             7045      
+ n)                                                              
+                                                                 
+ dense (Dense)               (None, 256)               901888    
+                                                                 
+ dense_1 (Dense)             (None, 128)               32896     
+                                                                 
+ dense_2 (Dense)             (None, 32)                4128      
+                                                                 
+ redshift (Dense)            (None, 1)                 33        
+                                                                 
+=================================================================
+Total params: 945,990
+Trainable params: 938,945
+Non-trainable params: 7,045
+_________________________________________________________________

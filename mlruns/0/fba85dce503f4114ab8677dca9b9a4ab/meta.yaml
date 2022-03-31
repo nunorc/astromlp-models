@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/nunocarvalho/tmp/new-msc/astromlp-models.git/mlruns/0/fba85dce503f4114ab8677dca9b9a4ab/artifacts
+end_time: 1648675660823
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+name: ''
+run_id: fba85dce503f4114ab8677dca9b9a4ab
+run_uuid: fba85dce503f4114ab8677dca9b9a4ab
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1648674836322
+status: 3
+tags: []
+user_id: nunocarvalho
