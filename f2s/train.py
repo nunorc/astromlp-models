@@ -4,12 +4,13 @@ import tensorflow as tf
 import mlflow.keras
 
 from mysdss.helper import Helper
-from mysdss.utils import train_val_test_split
+from mysdss.utils import train_val_test_split, history_fit_plots
 from mysdss.datagen import DataGen
 
 import f2s
 
 mlflow.tensorflow.autolog(log_models=False)
+mlflow.set_tag('model', 'f2s')
 
 epochs = 20
 batch_size = 32
@@ -43,10 +44,14 @@ model = f2s.model()
 model.compile(optimizer=opt, loss='categorical_crossentropy', metrics=['accuracy'])
 history = model.fit(train_gen, validation_data=val_gen,
                     epochs=epochs, batch_size=batch_size,
-                    callbacks=[tf.keras.callbacks.TensorBoard(log_dir='logs', histogram_freq=1)], verbose=1)
+                    callbacks=my_callbacks(), verbose=1)
 
 # evaluate
 score = model.evaluate(test_gen, batch_size=batch_size, return_dict=True)
 
 # save model
 model.save(f'../model_store/{ model.name }')
+
+# save history plots
+history_fit_plots(model.name, history, base_dir='../model_plots')
+

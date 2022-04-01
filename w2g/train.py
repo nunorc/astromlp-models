@@ -10,6 +10,7 @@ from mysdss.datagen import DataGen
 import w2g
 
 mlflow.tensorflow.autolog(log_models=False)
+mlflow.set_tag('model', 'w2g')
 
 epochs = 20
 batch_size = 32
@@ -48,7 +49,7 @@ model = w2g.model(norm)
 model.compile(optimizer=opt, loss='categorical_crossentropy', metrics=['accuracy'])
 history = model.fit(train_gen, validation_data=val_gen,
                     epochs=epochs, batch_size=batch_size,
-                    callbacks=[tf.keras.callbacks.TensorBoard(log_dir='logs', histogram_freq=1)], verbose=1)
+                    callbacks=my_callbacks(), verbose=1)
 
 # evaluate
 score = model.evaluate(test_gen, batch_size=batch_size, return_dict=True)
