@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/nunorc/tmp/new-msc/astromlp-models.git/mlruns/0/27ebfc657d4b4e8b9a79400fa5d35cb7/artifacts
+end_time: 1648979675209
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+name: ''
+run_id: 27ebfc657d4b4e8b9a79400fa5d35cb7
+run_uuid: 27ebfc657d4b4e8b9a79400fa5d35cb7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1648978799728
+status: 3
+tags: []
+user_id: nunorc
