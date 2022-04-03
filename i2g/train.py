@@ -4,7 +4,7 @@ import tensorflow as tf
 import mlflow.keras
 
 from mysdss.helper import Helper
-from mysdss.utils import train_val_test_split
+from mysdss.utils import train_val_test_split, history_fit_plots, my_callbacks
 from mysdss.datagen import DataGen
 
 import i2g
@@ -51,3 +51,6 @@ score = model.evaluate(test_gen, batch_size=batch_size, return_dict=True)
 
 # save model
 model.save(f'../model_store/{ model.name }')
+
+# save history plots
+history_fit_plots(model.name, history, base_dir='../model_plots')
