@@ -4,7 +4,7 @@ import tensorflow as tf
 import mlflow.keras
 
 from mysdss.helper import Helper
-from mysdss.utils import train_val_test_split, history_fit_plots, 
+from mysdss.utils import train_val_test_split, history_fit_plots, my_callbacks
 from mysdss.datagen import DataGen
 
 import f2r
@@ -46,7 +46,7 @@ model = f2r.model()
 model.compile(optimizer=opt, loss=loss, metrics=['mean_squared_error', 'mean_absolute_error'])
 history = model.fit(train_gen, validation_data=val_gen,
                     epochs=epochs, batch_size=batch_size,
-                    callbacks=[tf.keras.callbacks.TensorBoard(log_dir='logs', histogram_freq=1)], verbose=1)
+                    callbacks=my_callbacks(), verbose=1)
 
 # evaluate
 score = model.evaluate(test_gen, batch_size=batch_size, return_dict=True)
