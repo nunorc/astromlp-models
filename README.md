@@ -10,9 +10,9 @@ is `../sdss-gs`).
 
 ## Models
 
-The following table quickly describes the available models.
+The following table quickly describes single input/output models available.
 
-|  Model   |  Input(s)    |  Output(s)     |  Type        |  Description      |
+|  Model   |  Input       |  Output        |  Type        |  Description      |
 |:--------:|:------------:|:--------------:|:------------:|-------------------|
 | `i2r`    |  `img`       |  `redshift`    |  regression  |  infer object redshift from RGB image  |
 | `f2r`    |  `fits`      |  `redshift`    |  regression  |  infer object redshift from FITS data  |
@@ -33,18 +33,31 @@ The following table quickly describes the available models.
 | `b2s`    |  `bands`     |  `subclass`    |  classification  |  infer object sub-class from bands data  |
 | `w2s`    |  `wise`      |  `subclass`    |  classification  |  infer object sub-class from WISE data  |
 | `i2g`    |  `img`       |  `gz2c`        |  classification  |  infer Galaxy Zoo 2 simplified class from RGB image  |
-| `f2g`    |  `fits`      |  `gz2c`        |  classification  |  infer Galaxy Zoo 2 simplified class from FTIS data  |
+| `f2g`    |  `fits`      |  `gz2c`        |  classification  |  infer Galaxy Zoo 2 simplified class from FITS data  |
 | `s2g`    |  `spectra`   |  `gz2c`        |  classification  |  infer Galaxy Zoo 2 simplified class from spectra data  |
 | `ss2g`   |  `ssel`      |  `gz2c`        |  classification  |  infer Galaxy Zoo 2 simplified class from selected spectra data  |
 | `b2g`    |  `bands`     |  `gz2c`        |  classification  |  infer Galaxy Zoo 2 simplified class from bands data  |
 | `w2sm`   |  `wise`      |  `gz2c`        |  classification  |  infer Galaxy Zoo 2 simplified class from WISE data  |
+
+The following table quickly summarizes the multi-input/output models available.
+
+|  Model             |  Input(s)                                 |  Output(s)                            |
+|:------------------:|:-----------------------------------------:|:-------------------------------------:|
+| `fSbW2rSM`         |  `fits, spectra, bands, wise`             |  `redshift, smass`                    |
+| `fSbW2sG`          |  `fits, spectra, bands, wise`             |  `subclass, gz2c`                     |
+| `iFsSSbW2r`        |  `img, fits, spectra, ssel, bands, wise`  |  `redshift`                           |
+| `iFsSSbW2sm`       |  `img, fits, spectra, ssel, bands, wise`  |  `smass`                              |
+| `iFsSSbW2s`        |  `img, fits, spectra, ssel, bands, wise`  |  `subclass`                           |
+| `iFsSSbW2g`        |  `img, fits, spectra, ssel, bands, wise`  |  `gz2c`                               |
+| `iFsSSbW2rSMsG`    |  `img, fits, spectra, ssel, bands, wise`  |  `redshift, smass, subclass, gz2c`    |
 
 The models available in this repository are implemented using [Keras](https://keras.io/).
 To fit the models available in this repository the [mysdss](https://github.com/nunorc/mysdss)
 Python companion package is also required.
 
 You can fit a model using [mlflow](https://mlflow.org/), for example to fit the `i2r` model using
-your current `python` (i.e. don't create a new environment using `conda`) you can run:
+your current `python` (i.e. don't create a new environment using `conda`) you can run from
+the repository directory:
 
     $ mlflow run i2r --no-conda
 

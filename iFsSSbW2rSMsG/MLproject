@@ -1,0 +1,12 @@
+
+name: iFsSSbW2rSMsG
+
+entry_points:
+  main:
+    parameters:
+      epochs: { type: float, default: 30 }
+      batch_size: { type: float, default: 32 }
+      optimizer: { type: string, default: 'adam' }
+      ds: { type: string, default: '../../sdss-gs' }
+    command: "python train.py {epochs} {batch_size} {optimizer} {ds}"
+
