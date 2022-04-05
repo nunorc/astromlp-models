@@ -37,7 +37,7 @@ The following table quickly describes single input/output models available.
 | `s2g`    |  `spectra`   |  `gz2c`        |  classification  |  infer Galaxy Zoo 2 simplified class from spectra data  |
 | `ss2g`   |  `ssel`      |  `gz2c`        |  classification  |  infer Galaxy Zoo 2 simplified class from selected spectra data  |
 | `b2g`    |  `bands`     |  `gz2c`        |  classification  |  infer Galaxy Zoo 2 simplified class from bands data  |
-| `w2sm`   |  `wise`      |  `gz2c`        |  classification  |  infer Galaxy Zoo 2 simplified class from WISE data  |
+| `w2g`   |  `wise`      |  `gz2c`        |  classification  |  infer Galaxy Zoo 2 simplified class from WISE data  |
 
 The following table quickly summarizes the multi-input/output models available.
 
@@ -51,33 +51,7 @@ The following table quickly summarizes the multi-input/output models available.
 | `iFsSSbW2g`        |  `img, fits, spectra, ssel, bands, wise`  |  `gz2c`                               |
 | `iFsSSbW2rSMsG`    |  `img, fits, spectra, ssel, bands, wise`  |  `redshift, smass, subclass, gz2c`    |
 
-The models available in this repository are implemented using [Keras](https://keras.io/).
-To fit the models available in this repository the [mysdss](https://github.com/nunorc/mysdss)
-Python companion package is also required.
 
-You can fit a model using [mlflow](https://mlflow.org/), for example to fit the `i2r` model using
-your current `python` (i.e. don't create a new environment using `conda`) you can run from
-the repository directory:
-
-    $ mlflow run i2r --no-conda
-
-You can also change the parameters to run the model, namely the number of epochs, the batch size,
-the loss function and optimizer to use, for example:
-
-    $ mlflow run i2r -P epochs=10 -P batch_size=32 -P loss=mse -P optimizer=adam --no-conda
-
-You can also change the location of the dataset by setting the `ds` parameter:
-
-    $ mlflow run i2r -P ds=/tmp/sdss-gs --no-conda
-
-To view the data concerting the fitting of the available models you can use `mlflow` user interface:
-
-    $ mlflow ui
-
-And can also check the generated [tensorboard](https://www.tensorflow.org/tensorboard) logs, for
-example:
-
-    $ tensorboard --logdir i2r/logs/
 
 ## Inputs & Outputs
 
@@ -147,6 +121,41 @@ detailed information on the original data is available [here](https://data.galax
 |  `Sen`     |  with features/disks, edge-on, no bulge  |
 |  `Ser`     |  with features/disks, edge-on, round bulge  |
 
+
+## Fitting Models and Visualizing Metrics
+
+The models available in this repository are implemented using [Keras](https://keras.io/).
+To fit the models available in this repository the [mysdss](https://github.com/nunorc/mysdss)
+Python companion package is also required.
+
+You can fit a model using [mlflow](https://mlflow.org/), for example to fit the `i2r` model using
+your current `python` (i.e. don't create a new environment using `conda`) you can run from
+the repository directory, and also include this run in the `i2r` experiment:
+
+    $ mlflow run i2r --experiment-name i2r --no-conda
+
+You can also change the parameters to run the model, namely the number of epochs, the batch size,
+the loss function and optimizer to use, for example:
+
+    $ mlflow run i2r -P epochs=10 -P batch_size=32 -P loss=mse -P optimizer=adam --experiment-name i2r --no-conda
+
+You can also change the location of the dataset by setting the `ds` parameter:
+
+    $ mlflow run i2r -P ds=/tmp/sdss-gs --experiment-name i2r --no-conda
+
+To view the data concerning the fitting of the available models you can use `mlflow` user interface:
+
+    $ mlflow ui --backend-store-uri sqlite:///mlruns.db
+
+To fit models and include data in this database you can set the `MLFLOW_TRACKING_URI` environment
+variable to this file, remember to use an absolute path, for example:
+
+    $ export MLFLOW_TRACKING_URI=sqlite:////home/nrc/astromlp-models.git/mlruns.db
+
+And can also check the generated [tensorboard](https://www.tensorflow.org/tensorboard) logs, for
+example:
+
+    $ tensorboard --logdir i2r/logs/
 
 ## Single Input/Output Models Hyper-parameters Exploration
 
