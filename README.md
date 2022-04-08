@@ -1,6 +1,10 @@
 
 # astromlp-models
 
+Deep learning models for astrophysics applications.
+
+## Topic: Galaxies
+
 Collection of Deep Learning models to characterize different proprieties of galaxies,
 based on data from the [Sloan Digital Sky Survey](https://www.sdss.org/) (SDSS).
 
@@ -8,7 +12,7 @@ The [SDSS Galaxy Subset](https://zenodo.org/record/6393488) dataset is used to
 train and explore available models (the default location of the dataset w.r.t. to this repository
 is `../sdss-gs`).
 
-## Models
+### Models
 
 The following table quickly describes single input/output models available.
 
@@ -53,7 +57,7 @@ The following table quickly summarizes the multi-input/output models available.
 
 
 
-## Inputs & Outputs
+### Inputs & Outputs
 
 The following tables describe the data used as inputs for the models, and the
 outputs for regression and classification models.
@@ -74,11 +78,11 @@ outputs for regression and classification models.
 |  `smass`     |  regression   |  stellar mass extracted from the [eBOSS Firefly catalog](https://www.sdss.org/dr16/spectro/eboss-firefly-value-added-catalog)  |
 |  `gz2c`      |  classification  | simplified version of the Galaxy Zoo 2 classification, from [Willett et al 2013](https://academic.oup.com/mnras/article/435/4/2835/1022913) (see class sets section below for details)  |
 
-## Class Sets
+### Class Sets
 
 The following tables describe the class set labels for the classification outputs.
 
-### SDSS sub-class subset (`subclass`)
+#### SDSS sub-class subset (`subclass`)
 
 The sub-class parameter for each object is available from the
 [SDSS spectroscopic catalogs](https://www.sdss.org/dr17/spectro/catalogs/).
@@ -90,7 +94,7 @@ The sub-class parameter for each object is available from the
 |  `STARBURST`  |  galaxy is star-forming  |
 |  `STARFORMING`|  has detectable emission lines that are consistent with star-formation criteria  |
 
-### Galaxy Zoo 2 Simplified Classes (`gz2c`)
+#### Galaxy Zoo 2 Simplified Classes (`gz2c`)
 
 This is a simplified version of the Galaxy Zoo 2 classification tree,
 detailed information on the original data is available [here](https://data.galaxyzoo.org/).
@@ -122,7 +126,7 @@ detailed information on the original data is available [here](https://data.galax
 |  `Ser`     |  with features/disks, edge-on, round bulge  |
 
 
-## Fitting Models and Visualizing Metrics
+### Fitting Models and Visualizing Metrics
 
 The models available in this repository are implemented using [Keras](https://keras.io/).
 To fit the models available in this repository the [mysdss](https://github.com/nunorc/mysdss)
@@ -157,7 +161,7 @@ example:
 
     $ tensorboard --logdir i2r/logs/
 
-## Single Input/Output Models Hyper-parameters Exploration
+### Single Input/Output Models Hyper-parameters Exploration
 
 The following table summarizes different combinations of batch size (32 or 64),
 optimizer (RMSProp or Adam) and loss functions (Mean Squared Error or Mean Absolute
