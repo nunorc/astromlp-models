@@ -32,7 +32,7 @@ if optimizer == 'rmsprop':
     opt = tf.keras.optimizers.RMSprop()
 
 # ids and datagens
-ids = helper.ids_list(has_img=True, has_fits=True, has_spectra=True, has_ssel=True, has_bands=True)
+ids = helper.ids_list(has_img=True, has_fits=True, has_spectra=True, has_ssel=True, has_bands=True, has_wise=True)
 ids_train, ids_val, ids_test = train_val_test_split(ids)
 train_gen = DataGen(ids_train, x=['img','fits','spectra','ssel','bands','wise'], y=['subclass'], batch_size=batch_size, helper=helper)
 val_gen = DataGen(ids_val, x=['img','fits','spectra','ssel','bands','wise'], y=['subclass'], batch_size=batch_size, helper=helper)
