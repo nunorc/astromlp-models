@@ -1,6 +1,6 @@
 
 import tensorflow as tf
-from mysdss.shared import CLASSES
+from astromlp.sdss.shared import CLASSES
 
 def model(snorm, ssnorm, bnorm, wnorm):
     # sub-network for image

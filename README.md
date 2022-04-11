@@ -129,8 +129,8 @@ detailed information on the original data is available [here](https://data.galax
 ### Fitting Models and Visualizing Metrics
 
 The models available in this repository are implemented using [Keras](https://keras.io/).
-To fit the models available in this repository the [mysdss](https://github.com/nunorc/mysdss)
-Python companion package is also required.
+To fit the models available in this repository the [astromlp](https://github.com/nunorc/astromlp)
+Python package that includes all the helper classes is also required.
 
 You can fit a model using [mlflow](https://mlflow.org/), for example to fit the `i2r` model using
 your current `python` (i.e. don't create a new environment using `conda`) you can run from

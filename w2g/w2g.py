@@ -1,6 +1,6 @@
 
 import tensorflow as tf
-from mysdss.shared import CLASSES
+from astromlp.sdss.shared import CLASSES
 
 def model(norm):
     wise = tf.keras.Input(shape=(4), name='wise')

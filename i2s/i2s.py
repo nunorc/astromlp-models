@@ -1,6 +1,6 @@
 
 import tensorflow as tf
-from mysdss.shared import CLASSES
+from astromlp.sdss.shared import CLASSES
 
 def model():
     img = tf.keras.Input(shape=(150, 150, 3), name='img')

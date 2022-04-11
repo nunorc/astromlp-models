@@ -3,9 +3,9 @@ import sys, os
 import tensorflow as tf
 import mlflow.keras
 
-from mysdss.helper import Helper
-from mysdss.utils import train_val_test_split, history_fit_plots, my_callbacks
-from mysdss.datagen import DataGen
+from astromlp.sdss.helper import Helper
+from astromlp.sdss.utils import train_val_test_split, history_fit_plots, my_callbacks
+from astromlp.sdss.datagen import DataGen
 
 import iFsSSbW2sm
 
