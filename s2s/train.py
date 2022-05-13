@@ -49,7 +49,7 @@ model = s2s.model(norm)
 model.compile(optimizer=opt, loss='categorical_crossentropy', metrics=['accuracy'])
 history = model.fit(train_gen, validation_data=val_gen,
                     epochs=epochs, batch_size=batch_size,
-                    callbacks=my_callbacks(), verbose=1)
+                    callbacks=my_callbacks(lr_scheduler=True, schedule='step_decay'), verbose=1)
 
 # evaluate
 score = model.evaluate(test_gen, batch_size=batch_size, return_dict=True)
