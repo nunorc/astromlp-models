@@ -4,7 +4,7 @@ name: i2g
 entry_points:
   main:
     parameters:
-      epochs: { type: float, default: 20 }
+      epochs: { type: float, default: 100 }
       batch_size: { type: float, default: 32 }
       optimizer: { type: string, default: 'adam' }
       ds: { type: string, default: '../../sdss-gs' }

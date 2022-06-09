@@ -12,7 +12,7 @@ import i2g
 mlflow.tensorflow.autolog(log_models=False)
 mlflow.set_tag('model', 'i2g')
 
-epochs = 20
+epochs = 100
 batch_size = 32
 optimizer = 'adam'
 ds = '../../sdss-gs'
