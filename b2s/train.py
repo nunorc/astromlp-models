@@ -12,7 +12,7 @@ import b2s
 mlflow.tensorflow.autolog(log_models=False)
 mlflow.set_tag('model', 'b2s')
 
-epochs = 20
+epochs = 150
 batch_size = 32
 optimizer = 'adam'
 ds = '../../sdss-gs'
