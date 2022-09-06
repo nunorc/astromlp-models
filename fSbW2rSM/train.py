@@ -4,7 +4,7 @@ import tensorflow as tf
 import mlflow.keras
 
 from astromlp.sdss.helper import Helper
-from astromlp.sdss.utils import train_val_test_split, history_fit_plots, my_callbacks
+from astromlp.sdss.utils import train_val_test_split, history_fit_plots, history_save, my_callbacks
 from astromlp.sdss.datagen import DataGen
 
 import fSbW2rSM
@@ -72,5 +72,6 @@ score = model.evaluate(test_gen, batch_size=batch_size, return_dict=True)
 # save model
 model.save(f'../model_store/{ model.name }')
 
-# save history plots
+# save history and plots
+history_save(model.name, history, base_dir='../model_history')
 history_fit_plots(model.name, history, base_dir='../model_plots')
