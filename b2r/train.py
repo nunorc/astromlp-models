@@ -12,8 +12,8 @@ import b2r
 mlflow.tensorflow.autolog(log_models=False)
 mlflow.set_tag('model', 'b2r')
 
-epochs = 20
-batch_size = 32
+epochs = 40
+batch_size = 64
 loss = 'mse'
 optimizer = 'rmsprop'
 ds = '../../sdss-gs'
@@ -51,7 +51,7 @@ model = b2r.model(norm)
 model.compile(optimizer=opt, loss=loss, metrics=['mean_squared_error', 'mean_absolute_error'])
 history = model.fit(train_gen, validation_data=val_gen,
                     epochs=epochs, batch_size=batch_size,
-                    callbacks=my_callbacks(), verbose=1)
+                    callbacks=my_callbacks(lr_scheduler=True, schedule='time_based_decay'), verbose=1)
 
 # evaluate
 score = model.evaluate(test_gen, batch_size=batch_size, return_dict=True)
