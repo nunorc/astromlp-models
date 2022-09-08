@@ -8,7 +8,7 @@ Deep learning models for astrophysics applications.
 Collection of Deep Learning models to characterize different proprieties of galaxies,
 based on data from the [Sloan Digital Sky Survey](https://www.sdss.org/) (SDSS).
 
-The [SDSS Galaxy Subset](https://zenodo.org/record/6501642) dataset is used to
+The [SDSS Galaxy Subset](https://doi.org/10.5281/zenodo.6393487) dataset is used to
 train and explore available models (the default location of the dataset w.r.t. to this repository
 is `../sdss-gs`).
 
