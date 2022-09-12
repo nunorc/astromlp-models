@@ -12,7 +12,7 @@ import s2r
 mlflow.tensorflow.autolog(log_models=False)
 mlflow.set_tag('model', 's2r')
 
-epochs = 100
+epochs = 20
 batch_size = 32
 loss = 'mse'
 optimizer = 'rmsprop'
