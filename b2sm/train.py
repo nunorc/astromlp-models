@@ -12,7 +12,7 @@ import b2sm
 mlflow.tensorflow.autolog(log_models=False)
 mlflow.set_tag('model', 'b2sm')
 
-epochs = 20
+epochs = 50
 batch_size = 32
 loss = 'mae'
 optimizer = 'adam'

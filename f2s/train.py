@@ -12,7 +12,7 @@ import f2s
 mlflow.tensorflow.autolog(log_models=False)
 mlflow.set_tag('model', 'f2s')
 
-epochs = 100
+epochs = 50
 batch_size = 64
 optimizer = 'adam'
 ds = '../../sdss-gs'

@@ -4,7 +4,7 @@ name: w2r
 entry_points:
   main:
     parameters:
-      epochs: { type: float, default: 40 }
+      epochs: { type: float, default: 20 }
       batch_size: { type: float, default: 64 }
       loss: { type: string, default: 'mse' }
       optimizer: { type: string, default: 'rmsprop' }

@@ -4,7 +4,7 @@ name: b2sm
 entry_points:
   main:
     parameters:
-      epochs: { type: float, default: 20 }
+      epochs: { type: float, default: 50 }
       batch_size: { type: float, default: 32 }
       loss: { type: string, default: 'mae' }
       optimizer: { type: string, default: 'adam' }
