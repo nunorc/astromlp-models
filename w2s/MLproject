@@ -4,7 +4,7 @@ name: w2s
 entry_points:
   main:
     parameters:
-      epochs: { type: float, default: 100 }
+      epochs: { type: float, default: 150 }
       batch_size: { type: float, default: 32 }
       optimizer: { type: string, default: 'adam' }
       ds: { type: string, default: '../../sdss-gs' }

@@ -13,6 +13,7 @@ def model():
     x = tf.keras.layers.SeparableConv2D(128, (3,3), activation='relu')(x)
     x = tf.keras.layers.MaxPooling2D(2, 2)(x)
     x = tf.keras.layers.Flatten()(x)
+    x = tf.keras.layers.Dropout(0.5)(x)
     x = tf.keras.layers.Dense(64, activation='relu', kernel_regularizer='l2')(x)
     x = tf.keras.layers.Dense(32, activation='relu', kernel_regularizer='l2')(x)
     gz2c = tf.keras.layers.Dense(len(CLASSES['gz2c']), activation='softmax', name='gz2c')(x)

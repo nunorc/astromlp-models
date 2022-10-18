@@ -12,7 +12,7 @@ import w2s
 mlflow.tensorflow.autolog(log_models=False)
 mlflow.set_tag('model', 'w2s')
 
-epochs = 100
+epochs = 150
 batch_size = 32
 optimizer = 'adam'
 ds = '../../sdss-gs'
