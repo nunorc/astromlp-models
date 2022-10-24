@@ -50,6 +50,7 @@ history = model.fit(train_gen, validation_data=val_gen,
 
 # evaluate
 score = model.evaluate(test_gen, batch_size=batch_size, return_dict=True)
+mlflow.log_param('test_score', score)
 
 # save model
 model.save('../model_store/i2sm')
