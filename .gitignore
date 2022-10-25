@@ -2,3 +2,4 @@ __pycache__
 model_plots
 .DS_Store
 mlruns
+runme.sh
