@@ -342,3 +342,7 @@ models) on the test set, never seen by any model during the exploration steps.
 |  `w2g`    |  `wise`     |  `gz2c`        |  10      |  64          |  Adam        |  categorical crossentropy      |  0.259943  |
 |**`w2g`**  |**`wise`**   |**`gz2c`**      |  **20**  |  **32**      |  **Adam**    |  **categorical crossentropy**  |**0.254076**|
 
+## Acknowledgments
+
+Thank you to Dr. Andrew Humphrey for helping spawning this project and his contributions that helped improve this work.
+
