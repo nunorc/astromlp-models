@@ -8,6 +8,6 @@ def model(norm):
     x = tf.keras.layers.Dense(32, activation='relu')(x)
     smass = tf.keras.layers.Dense(1, activation='linear', name='smass')(x)
 
-    model = tf.keras.Model(inputs=wise, outputs=smass, name='b2sm')
+    model = tf.keras.Model(inputs=wise, outputs=smass, name='w2sm')
 
     return model
