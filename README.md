@@ -136,7 +136,7 @@ You can fit a model using [mlflow](https://mlflow.org/), for example to fit the 
 your current `python` (i.e. don't create a new environment using `conda`) you can run from
 the repository directory, and also include this run in the `i2r` experiment:
 
-    $ mlflow run i2r --experiment-name i2r --no-conda
+    $ mlflow run i2r --experiment-name i2r --env-manager=local
 
 You can also change the parameters to run the model, namely the number of epochs, the batch size,
 the loss function and optimizer to use, for example:
